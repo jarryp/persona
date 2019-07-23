@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="persona" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9242a2d1-b5fd-4aaf-b49e-df6f3e9622ed">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cGVyc29uYS5wZXJzb25hICwxNSwxNSw1OTdhMWUyMC0zMGYyLTQwZDMtYWRhNS0wZWEwYjg5YzVl
+YjM7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_personas"/>
+	<property name="com.jaspersoft.studio.report.description" value="Reporte de Personas"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM persona.persona
+ORDER BY persona.persona.cedula DESC]]>
+	</queryString>
+	<field name="id_persona" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_persona"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="persona"/>
+	</field>
+	<field name="cedula" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cedula"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="persona"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="persona"/>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="persona"/>
+	</field>
+	<group name="id_persona">
+		<groupExpression><![CDATA[$F{id_persona}]]></groupExpression>
+	</group>
+	<group name="cedula">
+		<groupExpression><![CDATA[$F{cedula}]]></groupExpression>
+	</group>
+	<group name="nombre">
+		<groupExpression><![CDATA[$F{nombre}]]></groupExpression>
+	</group>
+	<group name="apellido">
+		<groupExpression><![CDATA[$F{apellido}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="10" width="550" height="130" uuid="43e6deb1-0554-4b2b-a9d3-dc99b674e5a9"/>
+				<staticText>
+					<reportElement x="0" y="0" width="380" height="100" uuid="994b6f6a-a3d7-4002-ade7-d85fdb593f99"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REPORTE DE PERSONAS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="100" width="380" height="30" uuid="a6ca11d6-b33f-4012-a4dc-d5f5775e97ed"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rubio estado Táchira]]></text>
+				</staticText>
+				<image>
+					<reportElement x="380" y="15" width="170" height="100" uuid="8dc3ad25-8d46-47a1-b222-de9ad684509c"/>
+					<imageExpression><![CDATA["logo_ps2.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement x="-10" y="10" width="580" height="20" uuid="526dbf1c-c513-416f-ab57-5b37b3af556f"/>
+				<staticText>
+					<reportElement x="20" y="0" width="100" height="20" uuid="ece347e3-4f9f-4c61-84db-bc40d21b16ed"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CODIGO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="0" width="100" height="20" uuid="2c35eaca-2fb3-4093-978e-7e2d928647a4"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CEDULA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="260" y="0" width="100" height="20" uuid="7ccfe340-9314-4f4c-988e-91e6fa2f5b9f"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOMBRE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="400" y="0" width="100" height="20" uuid="268adb87-0e85-4646-816e-2631e60b0e35"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[APELLIDO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement x="-10" y="0" width="580" height="22" uuid="dec4aa50-fd1e-4b31-b136-2474ac96bc49"/>
+				<textField>
+					<reportElement x="5" y="3" width="100" height="20" uuid="322bd3e3-a3b2-4405-afc1-6462185ae85a"/>
+					<textFieldExpression><![CDATA[$F{id_persona}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="130" y="4" width="100" height="18" uuid="4946eb01-9fc8-4896-9a0c-dead338b9ae2"/>
+					<textFieldExpression><![CDATA[$F{cedula}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="260" y="4" width="100" height="18" uuid="a64750f6-9590-4db5-9eca-1a498a33a180"/>
+					<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="410" y="4" width="100" height="18" uuid="891f0710-f1a8-4c69-a007-24181c05287e"/>
+					<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement x="-15" y="7" width="580" height="40" uuid="a4f40330-e935-4112-9df6-a0074a0e921a"/>
+				<textField>
+					<reportElement x="380" y="0" width="100" height="30" uuid="458550ee-4ed7-4734-85ea-4ecd07992143"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="480" y="0" width="100" height="30" uuid="fc7dd9ce-5b5a-47cc-bab6-f2a14af0cb31"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="35" y="0" width="100" height="20" uuid="5937cb19-51a7-4e69-a2c6-3fdb38d77528"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH:mm">
+					<reportElement x="35" y="21" width="100" height="16" uuid="7aae53d7-66be-448d-bda7-fb2a9f4fcdc6"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
